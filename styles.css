@@ -1,3 +1,17 @@
+.red-button {
+  background-color: red; /* Red background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 10px 0; /* Margin for spacing */
+}
+
+/* Add hover effect for button */
+.red-button:hover {
+  background-color: darkred; /* Darker red when hovered */
+}
 .container {
   width: 70%;
   margin: auto;
