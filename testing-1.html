@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="//pixel-rc.convertize.io/6239.js" charset="UTF-8"></script>
+    <script>
+            function getRandomRating(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+    window.convertize = window.convertize || [];
+    convertize.push('persuasive-notifications', {
+        shipping_diff_value: {
+            value: getRandomRating(1, 100),
+            min_value: 1,
+            max_value: 100,
+        }
+    });
+           window.convertize = window.convertize || [];
+    convertize.push('persuasive-notifications', {
+        product_rating: {
+            value: getRandomRating(1,1000),
+            min_value: 1,
+            max_value: 1000,
+        }
+    }); 
+</script>
     <title>Page-ont</title>
     <style>
         body, html {
