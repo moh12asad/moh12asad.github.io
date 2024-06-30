@@ -60,17 +60,33 @@
     </div>
 
     <script>
-        var inputField = document.getElementById('textInput');
+        document.addEventListener('DOMContentLoaded', function() {
+            var inputField = document.getElementById('textInput');
+            var container = document.querySelector('.container');
+            var buttonAdded = false;
 
-        inputField.addEventListener('input', function() {
-            var button = document.querySelector('.button');
-            if (!button && this.value.trim() !== '') {
-                button = document.createElement('a');
-                button.href = 'https://moh12asad.github.io/page-two';
-                button.className = 'button visible';
-                button.textContent = 'Click Me';
-                document.querySelector('.container').appendChild(button);
+            function createButton() {
+                if (!buttonAdded) {
+                    var button = document.createElement('a');
+                    button.href = 'https://moh12asad.github.io/page-two';
+                    button.className = 'button';
+                    button.textContent = 'Click Me';
+                    container.appendChild(button);
+                    buttonAdded = true;
+                }
             }
+
+            inputField.addEventListener('input', function() {
+                if (this.value.trim() !== '') {
+                    createButton();
+                }
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('#textInput')) {
+                    createButton();
+                }
+            });
         });
     </script>
 </body>
