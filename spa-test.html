@@ -41,6 +41,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            text-decoration: none; /* Remove underline from the link */
             display: none; /* Initially hide the button */
         }
         .button:hover {
@@ -62,12 +63,12 @@
         document.addEventListener('click', function() {
             let button = document.querySelector('.button');
             if (!button) {
-                button = document.createElement('button');
+                button = document.createElement('a');
                 button.className = 'button';
                 button.textContent = 'Submit';
-                button.href="https://moh12asad.github.io/page-two";
+                button.href = 'https://moh12asad.github.io/page-two';
                 document.querySelector('.container').appendChild(button);
-                button.style.display = 'inline-block';
+                button.style.display = 'inline-block'; // Show the button
             }
         });
     </script>
