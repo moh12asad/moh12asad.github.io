@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <script src="//pixel-dev.convertize.io/43.js"></script>
-    <!--<script src="//pixel-rc.convertize.io/6244.js"></script> -->
     <style>
         body, html {
             height: 100%;
@@ -52,41 +51,23 @@
 <body>
     <div class="container">
         <div class="important-text">
-            Testing
+            Testing split url
         </div>
         <div class="input-field">
-            <input type="text" placeholder="Enter text here" id="textInput">
+            <input type="text" placeholder="Enter text here">
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var inputField = document.getElementById('textInput');
-            var container = document.querySelector('.container');
-            var buttonAdded = false;
-
-            function createButton() {
-                if (!buttonAdded) {
-                    var button = document.createElement('a');
-                    button.href = 'https://moh12asad.github.io/page-two';
-                    button.className = 'button';
-                    button.textContent = 'Click Me';
-                    container.appendChild(button);
-                    buttonAdded = true;
-                }
+        document.addEventListener('click', function() {
+            let button = document.querySelector('.button');
+            if (!button) {
+                button = document.createElement('button');
+                button.className = 'button';
+                button.textContent = 'Submit';
+                document.querySelector('.container').appendChild(button);
+                button.style.display = 'inline-block'; // Show the button
             }
-
-            inputField.addEventListener('input', function() {
-                if (this.value.trim() !== '') {
-                    createButton();
-                }
-            });
-
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('#textInput')) {
-                    createButton();
-                }
-            });
         });
     </script>
 </body>
