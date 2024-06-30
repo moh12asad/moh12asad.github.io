@@ -47,9 +47,6 @@
         .button:hover {
             background-color: #0056b3;
         }
-        .button.visible {
-            display: inline-block; 
-        }
     </style>
 </head>
 <body>
@@ -62,17 +59,5 @@
         </div>
         <a href="https://moh12asad.github.io/page-two" class="button">Click Me</a>
     </div>
-
-    <script>
-        var timeoutPeriod = 5000;
-
-
-        function showButton() {
-            var button = document.querySelector('.button');
-            button.classList.add('visible');
-        }
-
-        setTimeout(showButton, timeoutPeriod);
-    </script>
 </body>
 </html>
