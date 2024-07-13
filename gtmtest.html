@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="//pixel-rc.convertize.io/6244.js"></script>
+<script src="//pixel-rc.convertize.io/6244.js"></script>
     <style>
         body, html {
             height: 100%;
@@ -41,8 +41,6 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none; /* Remove underline from the link */
-            display: none; /* Initially hide the button */
         }
         .button:hover {
             background-color: #0056b3;
@@ -52,25 +50,12 @@
 <body>
     <div class="container">
         <div class="important-text">
-            Testing split url
+            Testing
         </div>
         <div class="input-field">
             <input type="text" placeholder="Enter text here">
         </div>
+        <a href="https://moh12asad.github.io/page-two" class="button">Click Me</a>
     </div>
-
-    <script>
-        document.addEventListener('click', function() {
-            let button = document.querySelector('.button');
-            if (!button) {
-                button = document.createElement('a');
-                button.className = 'button';
-                button.textContent = 'Submit';
-                button.href = 'https://moh12asad.github.io/page-two';
-                document.querySelector('.container').appendChild(button);
-                button.style.display = 'inline-block'; // Show the button
-            }
-        });
-    </script>
 </body>
 </html>
