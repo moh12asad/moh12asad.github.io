@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--<script src="//pixel-dev.convertize.io/44.js"></script>-->
-    <!--<script src="//pixel-rc.convertize.io/6244.js"></script> -->
+   <!--<script src="//pixel-dev.convertize.io/44.js"></script>-->
+   <!--<script src="//pixel-rc.convertize.io/6244.js"></script> -->
     <script src="//pixel.convertize.io/11300.js"></script>
     <style>
         body, html {
@@ -58,21 +58,18 @@
         <div class="input-field">
             <input type="text" placeholder="Enter text here">
         </div>
-        <div id="dynamic-buttons">
-            <a href="https://moh12asad.github.io/upsell" class="button">Upsell</a>
-        </div>
-        <button onclick="addCartButton()" class="button">Add Cart Button</button>
+        <a href="https://moh12asad.github.io/upsell" class="button">Upsell</a>
     </div>
-
     <script>
-        function addCartButton() {
-            var buttonContainer = document.getElementById('dynamic-buttons');
-            var cartButton = document.createElement('a');
-            cartButton.href = "https://moh12asad.github.io/cart";
-            cartButton.className = "button";
-            cartButton.textContent = "Cart";
-            buttonContainer.appendChild(cartButton);
-        }
+        document.addEventListener('click', function() {
+            if (!document.querySelector('.cart-button')) {
+                const cartButton = document.createElement('a');
+                cartButton.href = "https://moh12asad.github.io/cart";
+                cartButton.className = "button cart-button";
+                cartButton.innerText = "cart";
+                document.querySelector('.container').appendChild(cartButton);
+            }
+        });
     </script>
 </body>
 </html>
