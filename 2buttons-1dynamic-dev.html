@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<script src="//pixel-dev.convertize.io/46.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .important-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            margin-bottom: 20px;
+        }
+        .input-field input {
+            padding: 15px;
+            font-size: 18px;
+            width: 80%;
+            max-width: 300px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="important-text">
+            Testing
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            
+        </div>
+        <div class="input-field">
+            <input type="text" placeholder="Enter text here">
+        </div>
+        <a href="https://moh12asad.github.io/page-view-goal-dev" class="button">Upsell</a>
+    </div>
+    <script>
+        document.addEventListener('click', function() {
+            if (!document.querySelector('.cart-button')) {
+                const cartButton = document.createElement('a');
+                cartButton.href = "https://moh12asad.github.io";
+                cartButton.className = "button cart-button";
+                cartButton.innerText = "cart";
+                document.querySelector('.container').appendChild(cartButton);
+            }
+        });
+    </script>
+</body>
+</html>
